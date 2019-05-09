@@ -3,7 +3,14 @@ import '../App.css';
 // import Button from './Button';
 class Book extends Component {
 	state = {
-		count: 0
+		count: 0,
+		showInfo: true
+	};
+
+	handleShowInfo = () => {
+		this.setState({
+			showInfo: !this.state.showInfo
+		});
 	};
 	handleClick = () => {
 		// console.log('This is a great information');
@@ -25,8 +32,16 @@ class Book extends Component {
 					<button onClick={this.handleClick}>Click Me</button>
 					<h1>count: {this.state.count}</h1>
 					<button onClick={() => deleteItem(id)}> Delete item </button>
-					<button onClick={deleteItem}>Your delete</button>
+					{/* <button onClick={deleteItem}>Your delete</button> */}
 					{/* <Button handleClick={this.handleClick} /> */}
+					<button onClick={this.handleShowInfo}>Show Info</button>
+					{this.state.showInfo ? (
+						<p>
+							Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi a quibusdam distinctio eos rem possimus
+							temporibus, saepe earum facere ad, repellendus maiores cupiditate quas animi sapiente sunt libero
+							reiciendis harum.
+						</p>
+					) : null}
 				</div>
 			</div>
 		);
