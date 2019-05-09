@@ -35,13 +35,20 @@ class Book extends Component {
 					{/* <button onClick={deleteItem}>Your delete</button> */}
 					{/* <Button handleClick={this.handleClick} /> */}
 					<button onClick={this.handleShowInfo}>Show Info</button>
-					{this.state.showInfo ? (
+					{/* {this.state.showInfo ? (
 						<p>
 							Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi a quibusdam distinctio eos rem possimus
 							temporibus, saepe earum facere ad, repellendus maiores cupiditate quas animi sapiente sunt libero
 							reiciendis harum.
 						</p>
-					) : null}
+					) : null} */}
+					{this.state.showInfo && (
+						<p>
+							Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi a quibusdam distinctio eos rem possimus
+							temporibus, saepe earum facere ad, repellendus maiores cupiditate quas animi sapiente sunt libero
+							reiciendis harum.
+						</p>
+					)}
 				</div>
 			</div>
 		);
